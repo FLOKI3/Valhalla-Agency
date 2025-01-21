@@ -9,6 +9,9 @@ Route::get('/index', function () {
 Route::get('/', function () {
     return view('user.home');
 });
+Route::get('/signin', function () {
+    return view('user.signin');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

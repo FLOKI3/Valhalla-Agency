@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.user-home')
 @section('main')
     <!-- ====== Hero Section Start -->
     <div id="home" class="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]">
@@ -40,32 +40,21 @@
                               Construit avec la dernière technologie
                           </p>
                           <div class="wow fadeInUp flex items-center justify-center gap-4 text-center" data-wow-delay=".3s">
-                              <!-- HTML Icon -->
                               <div class="text-white/60 duration-300 ease-in-out hover:text-white">
                                   <i class="fab fa-html5 text-4xl"></i>
                               </div>
-                      
-                              <!-- CSS Icon -->
                               <div class="text-white/60 duration-300 ease-in-out hover:text-white">
                                   <i class="fab fa-css3-alt text-4xl"></i>
                               </div>
-                      
-                              <!-- JavaScript Icon -->
                               <div class="text-white/60 duration-300 ease-in-out hover:text-white">
                                   <i class="fab fa-js text-4xl"></i>
                               </div>
-                      
-                              <!-- Bootstrap Icon -->
                               <div class="text-white/60 duration-300 ease-in-out hover:text-white">
                                   <i class="fab fa-bootstrap text-4xl"></i>
                               </div>
-                      
-                              <!-- Python Icon -->
                               <div class="text-white/60 duration-300 ease-in-out hover:text-white">
                                   <i class="fab fa-python text-4xl"></i>
                               </div>
-                      
-                              <!-- Django Icon -->
                               <div class="text-white/60 duration-300 ease-in-out hover:text-white">
                                   <i class="fas fa-server text-4xl"></i>
                               </div>
