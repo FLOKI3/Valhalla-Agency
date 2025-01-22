@@ -1,17 +1,20 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SignInController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/index', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return view('user.home');
-});
-Route::get('/signin', function () {
-    return view('user.signin');
-});
+Route::get('/signup', function () {
+    return view('user.signup');
+})->name('signup');
+
+
+Route::get('/', [HomePageController::class, 'index'])->name('user.home');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -20,26 +20,26 @@
             class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white dark:bg-dark-2 py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent dark:lg:bg-transparent lg:py-0 lg:px-4 lg:shadow-none xl:px-6">
             <ul class="blcok lg:flex 2xl:ml-20">
               <li class="relative group">
-                <a href=""
-                  class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6">
+                <a href="{{ route('user.home') }}"
+                  class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6">
                   Accueil
                 </a>
               </li>
               <li class="relative group">
                 <a href="/#about"
-                  class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10">
+                  class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10">
                   Fonctionnalités
                 </a>
               </li>
               <li class="relative group">
                 <a href="/#pricing"
-                  class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10">
+                  class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10">
                   Tarifs
                 </a>
               </li>
               <li class="relative group">
                 <a href="/#contact"
-                  class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10">
+                  class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-body-color dark:lg:text-dark-6 xl:ml-10">
                   Contact
                 </a>
               </li>
@@ -111,13 +111,13 @@
             </span>
           </label>
           <div class="hidden sm:flex">
-            <a href="signin.html"
+            <a href="{{ route('login') }}"
               class="loginBtn py-2 px-[22px] text-base font-medium text-dark dark:text-white hover:opacity-70">
-              Sign In
+              Se connecter
             </a>
-            <a href=""
+            <a href="{{ route('register') }}"
               class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md signUpBtn bg-primary hover:bg-blue-dark">
-              Sign Up
+              S'inscrire
             </a>
           </div>
         </div>

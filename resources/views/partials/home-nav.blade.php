@@ -3,7 +3,7 @@
     <div class="container">
         <div class="relative -mx-4 flex items-center justify-between">
             <div class="w-60 max-w-full px-4">
-                <a href="#" class="navbar-logo block w-full py-5">
+                <a href="{{ route('user.home') }}" class="navbar-logo block w-full py-5">
                     <img src="assets/images/logo/logo-white.png" alt="logo" class="header-logo w-full" />
                 </a>
             </div>
@@ -19,26 +19,26 @@
                         class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
                         <ul class="blcok lg:flex 2xl:ml-20">
                             <li class="group relative">
-                                <a href=""
-                                    class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70">
+                                <a href="#home"
+                                    class="mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70">
                                     Accueil
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a href="#about"
-                                    class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                                    class="mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
                                     Fonctionnalités
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a href="#pricing"
-                                    class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                                    class="mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
                                     Tarifs
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a href="#contact"
-                                    class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                                    class="mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
                                     Contact
                                 </a>
                             </li>
@@ -87,16 +87,28 @@
                             </svg>
                         </span>
                     </label>
-                    <div class="hidden sm:flex">
-                        <a href=""
-                            class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
-                            Se connecter
-                        </a>
-                        <a href=""
-                            class="signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark">
-                            S'inscrire
-                        </a>
-                    </div>
+                    @if (Route::has('login'))
+                        @auth
+                            <div class="hidden sm:flex">
+                                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                                    <img class="w-10 rounded-full" src="/assets/images/favicon.png" alt="user photo">
+                                </div>
+                            </div>
+                        @else
+                            <div class="hidden sm:flex">
+                                <a href="{{ route('login') }}"
+                                    class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
+                                    Se connecter
+                                </a>
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}"
+                                        class="signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark">
+                                        S'inscrire
+                                    </a>
+                                @endif
+                            </div>
+                        @endauth
+                    @endif
                 </div>
             </div>
         </div>
